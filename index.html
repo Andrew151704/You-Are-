@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>You Are Earth — Interactive Experience</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;700;800&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/src/style.css" />
+</head>
+<body>
+
+  <div id="intro-overlay">
+    <div class="intro-content">
+      <p class="heartbeat-sub">An Interactive Journey</p>
+      <h1 class="heartbeat-text">This is your heartbeat.</h1>
+      <button id="start-btn" class="glow-button">
+        <span>Begin Experience</span>
+        <div class="button-glow"></div>
+      </button>
+    </div>
+  </div>
+
+  <div id="hud" class="glass-dock">
+    <div class="hud-item">
+      <span class="hud-label">Timeline Year</span>
+      <div class="hud-value" id="year-num">2026</div>
+    </div>
+    <div class="hud-divider"></div>
+    <div class="hud-item">
+      <span class="hud-label">Ecosystem Integrity</span>
+      <div class="hud-value-bar">
+        <div id="health-bar-fill"></div>
+      </div>
+    </div>
+  </div>
+
+  <div id="undo-container">
+    <button id="undo-btn" class="action-btn">
+      <span class="btn-text">Undo What You Did</span>
+      <div class="btn-border-glow"></div>
+    </button>
+  </div>
+
+  <div class="scroll-container"></div>
+
+  <canvas id="webgl-canvas"></canvas>
+
+  <script type="module" src="/src/main.js"></script>
+</body>
+</html>
