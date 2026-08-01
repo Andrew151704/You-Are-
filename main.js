@@ -1,8 +1,8 @@
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
-import { SceneManager } from './scene/SceneManager.js';
-import { SoundEngine } from './audio/SoundEngine.js';
-import { UIController } from './ui/UIController.js';
+import { SceneManager } from './SceneManager.js';
+import { SoundEngine } from './SoundEngine.js';
+import { UIController } from './UIController.js';
 
 gsap.registerPlugin(ScrollTrigger);
 

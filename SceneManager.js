@@ -1,6 +1,6 @@
 import * as THREE from 'three';
-import { Terrain } from '../components/Terrain.js';
-import { SmokeParticles } from '../components/SmokeParticles.js';
+import { Terrain } from './Terrain.js';
+import { SmokeParticles } from './SmokeParticles.js';
 import { PostProcessing } from './PostProcessing.js';
 
 export class SceneManager {
