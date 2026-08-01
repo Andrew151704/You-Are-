@@ -15,6 +15,8 @@ export class Terrain {
       const elevation = Math.sin(x * 0.06) * Math.cos(z * 0.06) * 5 + Math.sin(x * 0.02) * 3;
       pos.setY(i, elevation);
     }
+    
+    pos.needsUpdate = true;
     geometry.computeVertexNormals();
 
     this.material = new THREE.MeshStandardMaterial({
