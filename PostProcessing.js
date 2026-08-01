@@ -28,6 +28,7 @@ export class PostProcessing {
         }
       `,
       fragmentShader: `
+        precision mediump float;
         uniform sampler2D tDiffuse;
         uniform float uProgress;
         varying vec2 vUv;
@@ -35,13 +36,11 @@ export class PostProcessing {
         void main() {
           vec2 uv = vUv;
           
-          // Chromatic Aberration offset based on pollution level
           float offset = uProgress * 0.008;
           float r = texture2D(tDiffuse, uv + vec2(offset, 0.0)).r;
           float g = texture2D(tDiffuse, uv).g;
           float b = texture2D(tDiffuse, uv - vec2(offset, 0.0)).b;
 
-          // Vignette effect
           float dist = distance(uv, vec2(0.5));
           float vignette = smoothstep(0.8, 0.2 + (1.0 - uProgress) * 0.3, dist);
 
